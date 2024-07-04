@@ -22,8 +22,11 @@ const Menu = () => {
             <Helmet>
                 <title>Bistro Boss|Menu</title></Helmet>
             <Cover img={menuImg} title='our menu'></Cover>
+            {/* main cover */}
             <SubTitle subHeading="Don't Miss" heading="Today's Offer"></SubTitle>
+            {/* offered menu items */}
             <MenuCategory items={offered}></MenuCategory>
+            {/* dessert menu items */}
             <MenuCategory 
             items={desserts}
             title="Desserts"
