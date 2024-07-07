@@ -1,19 +1,21 @@
 
 
-const FoodCard = () => {
+const FoodCard = ({item}) => {
+    const {name,image,price,recipe} = item
     return (
         <div>
             <div className="card bg-base-100 w-96 shadow-xl">
+                <p className="absolute right-0 mr-4 mt-4 px-4 bg-slate-900 text-white">{price}</p>
                 <figure>
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                        alt="Shoes" />
+                        src={image}
+                        alt="Image" />
                 </figure>
-                <div className="card-body">
-                    <h2 className="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div className="card-body flex flex-col items-center">
+                    <h2 className="card-title ">{name}</h2>
+                    <p>{recipe}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                        <button className="btn btn-outline bottom-0 border-b-4 bg-slate-100 border-orange-400">Add to Cart</button>
                     </div>
                 </div>
             </div>
